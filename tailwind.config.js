@@ -20,7 +20,8 @@ module.exports = {
 				base: ["Poppins", "sans-serif"] // Set Poppins as the base font
 			},
 			boxShadow: {
-				banner: "0px -5px 35px 22px rgba(0, 0, 0, 0.10)"
+				banner: "0px -5px 35px 22px rgba(0, 0, 0, 0.10)",
+				form: "0px 2px 4px 0px rgba(0, 0, 0, 0.50)"
 			}
 		}
 	},
