@@ -10,23 +10,44 @@
 
 @layer utilities {
 	.bannerFooter {
-		@apply bg-main text-white flex flex-col items-center text-center md:flex-row md:justify-around py-2 px-4 md:py-6 sticky w-full bottom-0 space-y-4 md:space-y-0 shadow-banner;
+		@apply bg-main text-white flex flex-col items-center text-center md:flex-row md:justify-around py-2 px-4 md:py-6 fixed w-full bottom-0 space-y-4 md:space-y-0 shadow-banner z-[300];
 	}
 
-	/* Action  boxes hero */
+	/* Media Queries  for Tablet above*/
 
-	.custom-checkbox input[type="checkbox"] {
-		display: none;
+	@media (min-width: 768px) {
+		.boxesContainer::before {
+			content: "";
+			position: absolute;
+			background-image: url("../img/dotsLeft.svg");
+			width: 4rem;
+			height: 8rem;
+			top: 32%;
+		}
+		.boxesContainer::after {
+			content: "";
+			position: absolute;
+			background-image: url("../img/gotsRight.svg");
+			width: 15rem;
+			height: 3rem;
+			right: 0rem;
+			bottom: -6rem;
+		}
 	}
 
-	.custom-checkbox
-		input[type="checkbox"]:checked
-		+ .label-content
-		.checkbox-icon {
-		display: block;
-	}
+	/* Media Queries  for desktop */
 
-	.checkbox-icon {
-		display: none;
+	@media (min-width: 1250px) {
+		.texImage::before {
+			content: "";
+			position: absolute;
+			background-image: url("../img/coupleHero.png");
+			background-repeat: no-repeat;
+			top: -36%;
+			right: -4%;
+			width: 43rem;
+			height: 18rem;
+			z-index: 100;
+		}
 	}
 }

@@ -49,9 +49,9 @@
 			</div>
 		</nav>
 		<!-- Hero section -->
-		<section class="bg-main h-[90vh] py-16">
+		<section class="bg-main md:h-[90vh] py-16 md:px-4">
 			<!-- text -->
-			<div class="md:container md:mx-auto">
+			<div class="md:container md:mx-auto relative">
 				<div
 					class="text-center space-y-4 md:text-left md:max-w-[32rem] md:ml-10"
 				>
@@ -59,7 +59,7 @@
 					<h1 class="text-4xl md:text-5xl text-white font-bold">
 						The Personal Comparison Service
 					</h1>
-					<p class="text-white font-normal">
+					<p class="text-white font-normal px-4 md:px-0">
 						Compare your policy options with the help of our experts. No hassle,
 						no obligation.
 					</p>
@@ -67,56 +67,183 @@
 			</div>
 
 			<!-- option form boxes -->
-
 			<div
-				class="boxesOptions bg-white shadow-form max-w-[67.37rem] mx-auto rounded-md overflow-hidden flex"
+				class="boxesOptions z-[200] md:mt-12 md:bg-white md:shadow-form max-w-[67.37rem] mx-auto rounded-md flex md:mb-0"
+				id="boxOption"
 			>
-				<div class="boxesContainer flex-[2]">
+				<!--boxes  -->
+				<div
+					class="boxesContainer relative flex flex-col w-full flex-[2] my-8 md:mt-12 md:mb-24 px-4 md:px-0 space-y-4 md:space-y-10 md:grid grid-cols-12"
+				>
 					<!-- boxes options -->
+
+					<!-- Funneral Insurance -->
 					<label
-						class="custom-checkbox flex items-center p-4 border bg-white border-gray-200 rounded-md cursor-pointer shadow-md max-w-sm"
+						class="custom-checkbox self-center p-4 border bg-white border-gray-200 rounded-md cursor-pointer shadow-md max-w-sm col-start-2 col-end-8"
+						data-value="funeralInsurance"
 					>
-						<input type="checkbox" class="hidden" id="funeralInsurance" />
-						<div class="label-content flex items-center">
+						<input
+							type="checkbox"
+							class="hidden"
+							id="funeralInsurance"
+							value="funeralInsurance"
+							name="insuranceType"
+						/>
+						<div class="label-content flex items-center w-full justify-center">
 							<div class="flex-shrink-0 mr-3">
 								<!-- Placeholder for the image icon -->
 								<img
-									src="https://via.placeholder.com/40"
+									src="./img/funneralIcon.svg"
 									alt="Icon"
-									class="h-10 w-10"
+									class="h-20 w-20"
 								/>
 							</div>
-							<div class="flex-1">
-								<span class="block text-lg font-semibold"
-									>Funeral Insurance</span
-								>
+							<div class="">
+								<div class="flex items-center justify-normal">
+									<span class="block text-lg font-semibold mr-1 text-nowrap"
+										>Funeral Insurance</span
+									>
+									<div
+										class="checkBoxIcon w-4 h-4 bg-slate-100 rounded border border-zinc-800"
+									>
+										<img
+											src="./img/checkIcon.svg"
+											class="object-fill hidden w-full"
+											alt=""
+										/>
+									</div>
+								</div>
 								<span class="block text-gray-600"
 									>Arrange the funeral you want</span
 								>
 							</div>
-							<div class="flex-shrink-0 ml-3">
-								<svg
-									class="checkbox-icon h-6 w-6 text-green-500"
-									fill="none"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-									xmlns="http://www.w3.org/2000/svg"
+						</div>
+					</label>
+
+					<!-- Life Insurance -->
+					<label
+						class="custom-checkbox self-center py-4 px-2 border bg-white border-gray-200 rounded-md cursor-pointer shadow-md max-w-sm col-start-6 col-end-12"
+						data-value="lifeInsurance"
+					>
+						<input
+							type="checkbox"
+							class="hidden"
+							id="lifeInsurance"
+							value="lifeInsurance"
+							name="insuranceType"
+						/>
+						<div class="label-content flex items-center w-full justify-center">
+							<div class="flex-shrink-0 mr-3">
+								<!-- Placeholder for the image icon -->
+								<img
+									src="./img/lifeInsuranceIcon.svg"
+									alt="Icon"
+									class="h-20 w-20"
+								/>
+							</div>
+							<div class="flex flex-col">
+								<div
+									class="px-1 py-1 bg-purple-300 rounded inline-flex self-end"
 								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M5 13l4 4L19 7"
-									></path>
-								</svg>
+									<p
+										class="text-zinc-800 text-xs font-semibold uppercase leading-none tracking-wider"
+									>
+										Popular
+									</p>
+								</div>
+								<div class="flex items-center justify-normal">
+									<span class="block text-lg font-semibold mr-1 text-nowrap"
+										>Life Insurance</span
+									>
+									<div
+										class="checkBoxIcon w-4 h-4 bg-slate-100 rounded border border-zinc-800"
+									>
+										<img
+											src="./img/checkIcon.svg"
+											class="object-fill hidden w-full"
+											alt=""
+										/>
+									</div>
+								</div>
+								<span class="block text-gray-600"
+									>Protect the ones you love with a tax-free</span
+								>
+							</div>
+						</div>
+					</label>
+
+					<!-- Health Insurance -->
+					<label
+						class="custom-checkbox self-center p-4 border bg-white border-gray-200 rounded-md cursor-pointer shadow-md max-w-sm col-start-3 col-end-9"
+						data-value="healthInsurance"
+					>
+						<input
+							type="checkbox"
+							class="hidden"
+							id="healthInsurance"
+							value="healthInsurance"
+							name="insuranceType"
+						/>
+						<div class="label-content flex items-center w-full justify-center">
+							<div class="flex-shrink-0 mr-3">
+								<!-- Placeholder for the image icon -->
+								<img
+									src="./img/healthInsuranceIcon.svg"
+									alt="Icon"
+									class="h-20 w-20"
+								/>
+							</div>
+							<div class="flex flex-col">
+								<div class="flex items-center justify-normal">
+									<span class="block text-lg font-semibold mr-1 text-nowrap"
+										>Health Insurance</span
+									>
+									<div
+										class="checkBoxIcon w-4 h-4 bg-slate-100 rounded border border-zinc-800"
+									>
+										<img
+											src="./img/checkIcon.svg"
+											class="object-fill hidden w-full"
+											alt=""
+										/>
+									</div>
+								</div>
+								<span class="block text-gray-600"
+									>Arrange the funeral you want</span
+								>
 							</div>
 						</div>
 					</label>
 				</div>
 
 				<!-- Quick Quote -->
-
-				<div class="bg-main200 flex-1 hidden md:flex">quick quote</div>
+				<div
+					class="bg-main200 flex-1 hidden md:flex flex-col items-center justify-center px-4 texImage relative"
+				>
+					<div
+						class="flex flex-col items-center justify-center space-y-4 border-b-2 border-neutral-100 py-4"
+					>
+						<h3 class="font-bold text-white text-2xl">Quick Quote</h3>
+						<img src="./img/nowCircle.svg" class="" alt="" />
+						<p class="font-bold text-white text-xl text-center">
+							You won't pay a penny for our experienced consultants to compare
+						</p>
+					</div>
+					<ul
+						class="flex flex-col justify-start items-start px-4 mt-4 space-y-4 w-full"
+					>
+						<li class="flex items-start justify-center space-x-4">
+							<img src="./img/checkHeroNow.svg" alt="" />
+							<p class="text-white">
+								Free: <span class="font-semibold">Free to use</span>
+							</p>
+						</li>
+						<li class="flex items-start justify-center space-x-4">
+							<img src="./img/checkHeroNow.svg" alt="" />
+							<p class="text-white">Everything is kept quick and simple.</p>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</section>
 
@@ -125,7 +252,7 @@
 			<p class="text-sm font-bold md:text-3xl">
 				Take the next step: Get a quote today for any Insurance
 			</p>
-			<button type="button" class="btn-main">Continue</button>
+			<a href="#boxOption" type="button" class="btn-main">Continue</a>
 		</section>
 		<script src="./js/main.js"></script>
 	</body>
