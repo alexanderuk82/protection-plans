@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			localStorage.setItem("selectedInsuranceType", selectedValue);
 
 			// Redirect to another dynamic page
-			const nextPageUrl = `${selectedValue}.html`;
+			const nextPageUrl = `./${selectedValue}.html`;
 			window.location.href = nextPageUrl;
 		});
 	});
